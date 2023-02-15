@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /.pnp
+/assets
 .pnp.js
 
 # testing
@@ -23,5 +24,4 @@ yarn-debug.log*
 yarn-error.log*
 
 jsontosass.js
-jsonconfig.json
 package-lock.json

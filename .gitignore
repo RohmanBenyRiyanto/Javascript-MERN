@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+jsontosass.js
+jsonconfig.json
+package-lock.json

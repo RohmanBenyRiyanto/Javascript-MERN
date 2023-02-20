@@ -58,6 +58,12 @@ header {
     border-bottom: 1px solid $gray-200;
     width: 100%;
     position: relative;
+    margin-bottom: 50px;
+    // padding left and right 0
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
 
     .navbar{
         height: 80px;
@@ -76,6 +82,7 @@ header {
                         padding-right: 1rem;
                         font-weight: 400;
                         letter-spacing: 1px;
+                        font-size: 16px;
                         &:hover {
                             text-decoration: underline;
                             color: $primary;
@@ -86,3 +93,4 @@ header {
         }
     }
 }
+

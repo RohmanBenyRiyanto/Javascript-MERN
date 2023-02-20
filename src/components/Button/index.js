@@ -1,22 +1,22 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
-import propTypes from 'prop-types'
-
+import React from "react";
+import { Link } from "react-router-dom";
+import propTypes from "prop-types";
 
 export default function Button(props) {
-    const className = [props.className]
-    if (props.isPrimary) className.push("btn-primary")
-    if (props.isLarge) className.push("btn-lg")
-    if (props.isSmall) className.push("btn-sm")
-    if (props.isBlock) className.push("btn-block")
-    if (props.hasShadow) className.push("btn-shadow")
+    const className = [props.className];
+    if (props.isPrimary) className.push("btn-primary");
+    if (props.isLight) className.push("btn-light");
+    if (props.isLarge) className.push("btn-lg");
+    if (props.isSmall) className.push("btn-sm");
+    if (props.isBlock) className.push("btn-block");
+    if (props.hasShadow) className.push("btn-shadow");
 
     const onClick = () => {
-        if (props.onClick) props.onClick()
-    }
+        if (props.onClick) props.onClick();
+    };
 
     if (props.isDisabled || props.isLoading) {
-        if (props.isDisabled) className.push("disabled")
+        if (props.isDisabled) className.push("disabled");
         return (
             <span className={className.join(" ")} style={props.style}>
                 {props.isLoading ? (
@@ -54,33 +54,34 @@ export default function Button(props) {
                 >
                     {props.children}
                 </Link>
-            )
+            );
         }
     }
 
     return (
-        <div
+        <button
             className={className.join(" ")}
             style={props.style}
             onClick={onClick}
         >
-            props.children
-        </div>
-    )
+            {props.children}
+        </button>
+    );
 }
 
-Button.prototype = {
+Button.propTypes = {
     type: propTypes.oneOf(["button", "link"]),
     onClick: propTypes.func,
     href: propTypes.string,
     target: propTypes.string,
     className: propTypes.string,
-    isDisabled: propTypes.bool,
+    isPrimary: propTypes.bool,
+    isLight: propTypes.bool,
     isExternal: propTypes.bool,
+    isDisabled: propTypes.bool,
     isLoading: propTypes.bool,
     isSmall: propTypes.bool,
     isLarge: propTypes.bool,
     isBlock: propTypes.bool,
     hasShadow: propTypes.bool,
-    isPrimary: propTypes.bool,
-}
+};

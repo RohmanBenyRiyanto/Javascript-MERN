@@ -45,53 +45,59 @@
 @import "print";
 
 .brand-text-icon {
-    font-family: "Poppins", sans-serif;
-    font-size: 26px;
-    font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: $primary;
+  &:hover {
     color: $primary;
-    &:hover{
-        color: $primary;
-        text-decoration: none;
-    }
+    text-decoration: none;
+  }
 }
 
 header {
-    border-bottom: 1px solid $gray-200;
-    width: 100%;
-    position: relative;
-    margin-bottom: 50px;
-    // padding left and right 0
-    .container {
-        padding-left: 0;
-        padding-right: 0;
-    }
+  border-bottom: 1px solid $gray-200;
+  width: 100%;
+  position: relative;
+  margin-bottom: 50px;
+  // padding left and right 0
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
-    .navbar{
-        height: 80px;
+  .navbar {
+    height: 80px;
 
-        ul.navbar-nav{
-            li.nav-item {
-                &.active{
-                    a.nav-link{
-                        color: $primary;
-                    }
-                }
-                a {
-                    &.nav-link {
-                        color: $gray-900;
-                        padding-left: 1rem;
-                        padding-right: 1rem;
-                        font-weight: 400;
-                        letter-spacing: 1px;
-                        font-size: 16px;
-                        &:hover {
-                            text-decoration: underline;
-                            color: $primary;
-                        }
-                    }
-                }
-            }
+    ul.navbar-nav {
+      li.nav-item {
+        &.active {
+          a.nav-link {
+            color: $primary;
+          }
         }
+        a {
+          &.nav-link {
+            color: $gray-900;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            font-size: 16px;
+            &:hover {
+              text-decoration: underline;
+              color: $primary;
+            }
+          }
+        }
+      }
     }
+  }
+}
+section {
+  margin-bottom: 70px;
 }
 
+.card {
+  height: 100%;
+}
